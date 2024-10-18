@@ -1,0 +1,24 @@
+services:
+
+  api:
+    container_name: subparsvc
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    ports:
+      - "7979:3000"
+
+# just for testing, caddy runs w/ systemd in prod
+#  caddy:
+#    image: caddy:2.8.4
+#    ports:
+#      - "7878:7878"
+#    volumes:
+#      - ./Caddyfile:/etc/caddy/Caddyfile:z
+#      - ./static:/srv:z
+#      - caddy_data:/data
+#      - caddy_config:/config
+#
+#volumes:
+#  caddy_data:
+#  caddy_config:

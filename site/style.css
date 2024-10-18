@@ -1,0 +1,50 @@
+html {
+}
+
+#map { height: 400px; }
+#mapsection { padding: 0px; }
+
+#complextable { margin: auto; }
+.bullet {
+    width: 2rem;
+}
+
+#upcoming-preview {
+    margin-bottom: 0px;
+}
+
+
+.bicolumn {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.bicolumn div {
+    margin: 0px auto auto;
+}
+
+.train_missed {
+    color: red;
+    outline: 1px solid red;
+}
+
+.aging-effect {
+    animation: redden 120s;
+}
+
+@keyframes redden {
+    /* should try w/ border color also */
+    0%   { color: #00DC58; }
+    33%  { color: #f0e519; }
+    66%  { color: #ffac00; }
+    100% { color: #f90a04; }
+}
+
+.elevator {
+    padding-left: 3rem;
+}
+
+#upcoming-timer-container {
+    margin-left: auto;
+    margin-right: auto;
+}

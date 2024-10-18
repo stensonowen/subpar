@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Subpar</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="/f/style.css">
+    <script src="/f/main.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+                           integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+                           crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+
+  </head>
+  <body onload="main()">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://bulma.io">
+          home
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item"> Home </a>
+          <a class="navbar-item"> Documentation </a>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="section" id="mapsection">
+      <div id="map"></div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h1 class="title is-3" id="cplx_name"> </h1>
+        <p id="cplx_routes">  </p>
+        <h2 class="title is-3" id="cplx_ada">  </h2>
+
+        <div id="section">
+        </div>
+
+        <details>
+          <summary class="is-3"> 
+            <span class="title is-4"> Elevators </span>
+            <span class="aging-effect" id="elevator-preview-t"> </span>
+          </summary>
+          <div id="elevator-list">
+          </div>
+          <div>
+            <p>
+              See <a href="https://new.mta.info/elevator-escalator-status">MTA Elevator Portal</a> for more.
+            </p>
+          </div>
+        </details>
+
+        <details id="upcoming-details">
+          <summary class="is-3" >
+            <span class="title is-4"> Trains </span>
+            <span class="aging-effect" id="upcoming-preview-t"> </span>
+          </summary>
+          <div class="bicolumn has-text-centered">
+            <div>
+              <!-- <p class="is-size-3"> Uptown </p> -->
+              <table class="table is-size-4" id="upcoming-body-N">
+                <thead> <tr> <th> N/E </th> <th> Minutes </th> </tr> </thead>
+              </table>
+            </div>
+            <div>
+              <!-- <p class="is-size-3"> Downtown </p> -->
+              <table class="table is-size-4" id="upcoming-body-S">
+                <thead> <tr> <th> S/W </th> <th> Minutes </th> </tr> </thead>
+              </table>
+            </div>
+          </div>
+        </details>
+
+        <!--
+        <div>
+          <ul> Nearby </ul>
+          <li> <a href=""> a </a> </li>
+        </div>
+        -->
+
+
+      </div>
+    </section>
+  </body>
+</html>

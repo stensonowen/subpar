@@ -1,0 +1,18 @@
+subpar.nyc, www.subpar.nyc {
+    log {
+        # remember to 'chown caddy'
+        output file /var/log/caddy/subpar-access.log
+    }
+    handle_errors {
+        respond "{err.status_code} {err.status_text}"
+    }
+
+    redir / /all.html
+    root * /var/www/subpar
+    file_server
+}
+
+api.subpar.nyc {
+    reverse_proxy localhost:7979
+}
+

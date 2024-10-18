@@ -1,0 +1,9 @@
+[workspace]
+
+members = [
+    "subparlib",
+    "subparweb",
+    "subpardb",
+]
+
+resolver = "2"
